@@ -22,6 +22,29 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+  ## Arsitektur dan Design Pattern
+
+  a. Modular Architecture
+  
+  Proyek menggunakan modular architecture, di mana setiap fitur (seperti Users, Posts, dan Authentication) dipisahkan ke dalam modul yang berdiri sendiri. Hal ini memudahkan pengelolaan dan skalabilitas.
+  - Users Module: Mengelola pengguna (CRUD)
+  - Posts Module: Mengelola postingan (CRUD)
+  - Auth Module: Mengelola autentikasi dengan JWT
+
+  b. Repository Pattern
+
+  Proyek ini memanfaatkan TypeORM Repository Pattern untuk mengelola akses data. Semua operasi database (query, insert, update, delete) dilakukan melalui repository yang sesuai.
+
+  c. Controller-Service Pattern
+
+  - Controller: Bertanggung jawab atas menerima request HTTP, memvalidasi input, dan mengarahkan ke service.
+  - Service: Berisi logika bisnis utama dan mengelola interaksi dengan repository.
+
+  d. Middleware & Guards
+
+  - AuthGuard: Digunakan untuk melindungi endpoint dari akses tidak sah.
+  - JWT Strategy: Implementasi autentikasi berbasis token JWT.
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
